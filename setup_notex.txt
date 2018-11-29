@@ -11,3 +11,17 @@ nodemon index
 
 
 mkdir public
+#add the index.html and style.css
+load in browser
+http://localhost:4000/
+git add .
+git commit -m 'blah'
+git push
+
+npm install socket.io --save
+
+#check latest cdn link
+https://cdnjs.com/libraries/socket.io
+
+#dev version gives debugging info?
+https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.dev.js
