@@ -1,0 +1,13 @@
+https://www.youtube.com/watch?v=ggVsXljT0MI
+
+git init
+vim .gitignore
+npm init
+npm install express --save
+npm install nodemon --save
+
+#to start server using index.js
+nodemon index
+
+
+mkdir public
