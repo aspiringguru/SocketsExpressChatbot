@@ -16,10 +16,18 @@ var io = socket(server);
 io.on('connection', (socket) => {
   //nb requires socket.io on client side to connect.
   console.log('made socket connection', socket.id);
-  // Listen for events
+
+  // Handle chat event
+  //matches chat event in chat.js
   socket.on('chat', function(data){
       console.log("chat function: data=", data);
       io.sockets.emit('chat', data);
+  });
+
+  // Handle typing event
+  //matches typing event in chat.js
+  socket.on('typing', function(data){
+      socket.broadcast.emit('typing', data);
   });
 
 });
