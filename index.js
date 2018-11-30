@@ -14,6 +14,12 @@ app.use(express.static('public'));
 //https://socket.io/docs/
 var io = socket(server);
 io.on('connection', (socket) => {
-    //nb requires socket.io on client side to connect.
-    console.log('made socket connection', socket.id);
+  //nb requires socket.io on client side to connect.
+  console.log('made socket connection', socket.id);
+  // Listen for events
+  socket.on('chat', function(data){
+      console.log("chat function: data=", data);
+      io.sockets.emit('chat', data);
+  });
+
 });
